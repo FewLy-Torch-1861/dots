@@ -1,0 +1,12 @@
+@define-color ns-red        #CC241D;
+@define-color ns-purple     #B16286;
+@define-color ns-purple-alt #D3869B;
+
+@define-color ns-accent     @ns-purple;
+@define-color ns-accent-alt @ns-purple-alt;
+@define-color ns-fg         #EBDBB2;
+@define-color ns-fg-alt     #A89984;
+@define-color ns-bg         #282828;
+@define-color ns-bg-alt     #3C3836;
+@define-color ns-bg-hover   @ns-bg-alt;
+@define-color ns-urgent     @ns-red;
