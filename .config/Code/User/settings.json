@@ -1,0 +1,84 @@
+{
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "code-runner.executorMap": {
+    "rust": "cargo run"
+  },
+  "editor.aiStats.enabled": true,
+  "editor.cursorBlinking": "phase",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', 'Fira Code', monospace",
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": true,
+  "editor.renderWhitespace": "all",
+  "editor.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "redhat.telemetry.enabled": true,
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli",
+    "bats"
+  ],
+  "terminal.integrated.enableImages": true,
+  "terminal.integrated.smoothScrolling": true,
+  "vim.easymotion": true,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.leader": "<space>",
+  "vim.shell": "/usr/bin/fish",
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "window.commandCenter": false,
+  "window.controlsStyle": "hidden",
+  "window.dialogStyle": "custom",
+  "workbench.activityBar.location": "bottom",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.list.smoothScrolling": true,
+  "workbench.navigationControl.enabled": false,
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark Medium",
+  "workbench.preferredLightColorTheme": "Gruvbox Light Hard",
+  "explorer.confirmDragAndDrop": false,
+  "python.analysis.typeCheckingMode": "standard",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "explorer.confirmDelete": false,
+  "chat.commandCenter.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "geminicodeassist.project": "even-conquest-7td9f",
+  "geminicodeassist.inlineSuggestions.suggestionSpeed": "Fast"
+}
