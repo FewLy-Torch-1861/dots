@@ -1,0 +1,55 @@
+// -*- mode: jsonc -*-
+{
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/separator",
+    "hyprland/window"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "mpris",
+    "custom/separator",
+    "tray",
+    "custom/separator",
+    "clock"
+  ],
+  "custom/separator": {
+    "format": "|",
+    "interval": 0
+  },
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1"
+  },
+  "hyprland/window": {
+    "max-length": 50,
+    "format": "{title}",
+    "tooltip-format": "{class} - {title}",
+    "separate-outputs": true
+  },
+  "mpris": {
+    "interval": 1,
+    "max-length": 50,
+    "status-icons": {
+      "playing": "",
+      "paused": "",
+      "stopped": ""
+    },
+    "format": "{status_icon} {artist} - {title}",
+    "tooltip-format": "{artist} - {title}\n{album}",
+    "on-scroll-up": "pulsemixer --change-volume +5",
+    "on-scroll-down": "pulsemixer --change-volume -5"
+  },
+  "tray": {
+    "tooltip": false,
+    "icon-size": 16,
+    "spacing": 5
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %d %B %Y, %H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y, %H:%M:%S}"
+  }
+}
