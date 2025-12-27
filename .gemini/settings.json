@@ -1,0 +1,30 @@
+{
+  "general": {
+    "preferredEditor": "neovim",
+    "previewFeatures": true,
+    "disableAutoUpdate": true,
+    "enablePromptCompletion": true,
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "30d",
+      "maxCount": 50
+    }
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "ui": {
+    "footer": {
+      "hideSandboxStatus": true,
+      "hideContextPercentage": false
+    },
+    "hideTips": true
+  },
+  "tools": {
+    "shell": {
+      "showColor": true
+    }
+  }
+}
