@@ -1,0 +1,69 @@
+# GLOBAL CONFIGURATION OPTIONS
+max-history=5
+sort=-time
+#include=
+
+# BINDING OPTIONS
+on-button-left=invoke-default-action
+on-button-middle=none
+on-button-right=dismiss
+on-touch=dismiss
+on-notify=none
+
+# STYLE OPTIONS
+font=JetBrainsMono Nerd Font 10
+background-color=#282828BF
+border-color=#EBDBB2
+text-color=#EBDBB2
+width=370
+height=350
+outer-margin=0
+margin=6
+padding=6
+border-size=2
+border-radius=0
+progress-color=over #D3869B
+icons=1
+max-icon-size=64
+icon-path=
+icon-location=left
+icon-border-radius=0
+markup=1
+actions=1
+history=1
+format=<b>%s</b>\n%b
+text-alignment=left
+default-timeout=5000
+ignore-timeout=0
+group-by=none
+max-visible=5
+output=
+layer=top
+anchor=top-right
+
+# CRITERIA-ONLY STYLE OPTIONS
+#invisible=0
+
+# Urgent
+[urgency=critical]
+border-color=#CC241D
+default-timeout=0
+
+# Normal
+[urgency=normal]
+border-color=#EBDBB2
+default-timeout=5000
+
+# Low
+[urgency=low]
+border-color=#A89984
+default-timeout=3000
+
+# OSD
+[app-name=osd]
+anchor=bottom-center
+outer-margin=0,0,60
+background-color=#28282880
+width=200
+text-alignment=center
+format=<b>%s</b>%b
