@@ -4,19 +4,19 @@ OSD=~/.config/hypr/scripts/osd.sh
 
 case $1 in
 up)
-  pulsemixer --change-volume +5
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
   $OSD "Volume" "$(pulsemixer --get-volume | cut -d ' ' -f1)%"
   ;;
 dn)
-  pulsemixer --change-volume -5
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
   $OSD "Volume" "$(pulsemixer --get-volume | cut -d ' ' -f1)%"
   ;;
 lup)
-  pulsemixer --change-volume +1
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
   $OSD "Volume" "$(pulsemixer --get-volume | cut -d ' ' -f1)%"
   ;;
 ldn)
-  pulsemixer --change-volume -1
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
   $OSD "Volume" "$(pulsemixer --get-volume | cut -d ' ' -f1)%"
   ;;
 mute)
