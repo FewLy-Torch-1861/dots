@@ -6,7 +6,9 @@
     "custom/separator",
     "hyprland/window"
   ],
-  "modules-center": [],
+  "modules-center": [
+    "hyprland/submap"
+  ],
   "modules-right": [
     "mpris",
     "custom/separator",
