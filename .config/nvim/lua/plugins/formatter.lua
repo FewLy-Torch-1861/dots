@@ -8,6 +8,7 @@ return {
           lua = { "stylua" },
           sh = { "shfmt" },
           python = { "black" },
+          go = { "gofumpt" },
         },
 
         -- The options you set here will be merged with the builtin formatters.
