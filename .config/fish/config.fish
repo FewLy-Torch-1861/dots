@@ -10,6 +10,7 @@ set -x GOPATH $HOME/.go
 fish_add_path \
     $HOME/.local/bin \
     $HOME/.cargo/bin \
+    $HOME/.go/bin \
     $HOME/.spicetify
 
 if status is-interactive
