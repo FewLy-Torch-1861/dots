@@ -72,7 +72,7 @@ if status is-interactive
     abbr --add tea 'ls -AhT --level=2'
 
     # System maintenance
-    alias clnt 'gio trash --empty'
+    alias clnt 'rm -rf ~/.local/share/Trash/files/*'
 
     abbr --add updmirror 'sudo reflector --country Thailand,Singapore,Japan --latest 10 --sort rate --save /etc/pacman.d/mirrorlist && yay -Syy'
     abbr --add clnlog 'sudo journalctl --vacuum-time=7d'
