@@ -20,7 +20,8 @@
       "hideSandboxStatus": true,
       "hideContextPercentage": false
     },
-    "hideTips": true
+    "hideTips": true,
+    "hideBanner": true
   },
   "tools": {
     "shell": {
