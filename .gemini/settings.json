@@ -1,31 +1,32 @@
 {
-  "general": {
-    "preferredEditor": "neovim",
-    "previewFeatures": true,
-    "disableAutoUpdate": true,
-    "enablePromptCompletion": true,
-    "sessionRetention": {
-      "enabled": true,
-      "maxAge": "30d",
-      "maxCount": 50
-    }
-  },
   "security": {
     "auth": {
       "selectedType": "oauth-personal"
     }
   },
+  "general": {
+    "previewFeatures": true,
+    "vimMode": false,
+    "enablePromptCompletion": true,
+    "preferredEditor": "neovim"
+  },
   "ui": {
+    "hideTips": true,
+    "hideBanner": true,
     "footer": {
       "hideSandboxStatus": true,
       "hideContextPercentage": false
-    },
-    "hideTips": true,
-    "hideBanner": true
+    }
+  },
+  "context": {
+    "loadMemoryFromIncludeDirectories": true
   },
   "tools": {
     "shell": {
       "showColor": true
     }
+  },
+  "ide": {
+    "enabled": true
   }
 }
