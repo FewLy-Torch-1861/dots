@@ -1,6 +1,9 @@
 zoxide init fish | source
 source (/usr/bin/starship init fish --print-full-init | psub)
 
+# ── Env ────────────────────────────────
+set -Ux GOPATH "$HOME/.go"
+
 # ── Aliases & Abbr ─────────────────────
 # Core shortcuts
 alias c clear
