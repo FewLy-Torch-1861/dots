@@ -216,7 +216,7 @@
   "launcherLogoContrast": 1,
   "launcherLogoSizeOffset": 0,
   "fontFamily": "Ubuntu Nerd Font Propo",
-  "monoFontFamily": "Monospace",
+  "monoFontFamily": "JetBrainsMono Nerd Font Propo",
   "fontWeight": 400,
   "fontScale": 1,
   "notepadUseMonospace": true,
