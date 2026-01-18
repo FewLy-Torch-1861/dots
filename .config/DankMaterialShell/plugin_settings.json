@@ -1,5 +1,22 @@
 {
   "emojiLauncher": {
     "enabled": true
+  },
+  "dankLauncherKeys": {
+    "enabled": true
+  },
+  "dankPomodoroTimer": {
+    "enabled": true,
+    "autoStartBreaks": true,
+    "autoStartPomodoros": true,
+    "autoSetDND": true
+  },
+  "webSearch": {
+    "enabled": true,
+    "searchEngines": []
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
   }
 }
