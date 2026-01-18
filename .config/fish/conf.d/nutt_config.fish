@@ -3,6 +3,7 @@ source (/usr/bin/starship init fish --print-full-init | psub)
 
 # ── Env ────────────────────────────────
 set -Ux GOPATH "$HOME/.go"
+fish_add_path "$HOME/.local/bin"
 
 # ── Aliases & Abbr ─────────────────────
 # Core shortcuts
@@ -12,6 +13,9 @@ alias reload 'exec fish'
 alias t tmux
 alias ff fastfetch
 alias hf hyfetch
+
+alias please sudo
+alias pls sudo
 
 abbr --add chafa 'chafa -f symbols'
 
