@@ -7,7 +7,7 @@
   "general": {
     "previewFeatures": true,
     "vimMode": false,
-    "enablePromptCompletion": true,
+    "enablePromptCompletion": false,
     "preferredEditor": "neovim"
   },
   "ui": {
