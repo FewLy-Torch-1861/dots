@@ -58,5 +58,6 @@
   "workbench.tree.enableStickyScroll": false,
   "editor.stickyScroll.scrollWithEditor": false,
   "editor.stickyScroll.enabled": false,
-  "terminal.integrated.stickyScroll.enabled": false
+  "terminal.integrated.stickyScroll.enabled": false,
+  "python.analysis.typeCheckingMode": "standard"
 }

@@ -139,15 +139,16 @@
   "maxWorkspaceIcons": 3,
   "groupWorkspaceApps": true,
   "workspaceFollowFocus": false,
-  "showOccupiedWorkspacesOnly": false,
+  "showOccupiedWorkspacesOnly": true,
   "reverseScrolling": false,
   "dwlShowAllTags": false,
   "workspaceColorMode": "default",
+  "workspaceOccupiedColorMode": "sec",
   "workspaceUnfocusedColorMode": "default",
   "workspaceUrgentColorMode": "default",
   "workspaceFocusedBorderEnabled": false,
-  "workspaceFocusedBorderColor": "primary",
-  "workspaceFocusedBorderThickness": 2,
+  "workspaceFocusedBorderColor": "secondary",
+  "workspaceFocusedBorderThickness": 6,
   "workspaceNameIcons": {},
   "waveProgressEnabled": true,
   "scrollTitleEnabled": true,
@@ -190,7 +191,7 @@
   "clockDateFormat": "",
   "lockDateFormat": "",
   "mediaSize": 1,
-  "appLauncherViewMode": "grid",
+  "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 5,
@@ -217,7 +218,7 @@
       "cursorHideTimeout": 0
     }
   },
-  "launcherLogoMode": "compositor",
+  "launcherLogoMode": "os",
   "launcherLogoCustomPath": "",
   "launcherLogoColorOverride": "primary",
   "launcherLogoColorInvertOnMode": false,
@@ -230,7 +231,7 @@
   "fontScale": 1,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
-  "notepadFontSize": 16,
+  "notepadFontSize": 18,
   "notepadShowLineNumbers": true,
   "notepadTransparencyOverride": -1,
   "notepadLastCustomTransparency": 0.7,
@@ -260,7 +261,7 @@
   "brightnessDevicePins": {},
   "wifiNetworkPins": {
     "preferredWifi": [
-      "BALU_2.4G",
+      "RAKSA_2.4G",
       "RAKSA_5G"
     ]
   },
@@ -293,7 +294,8 @@
   "matugenTemplateKcolorscheme": true,
   "matugenTemplateVscode": true,
   "showDock": false,
-  "dockAutoHide": true,
+  "dockAutoHide": false,
+  "dockSmartAutoHide": true,
   "dockGroupByApp": false,
   "dockOpenOnOverview": false,
   "dockPosition": 1,
@@ -315,6 +317,7 @@
   "lockScreenShowDate": true,
   "lockScreenShowProfileImage": true,
   "lockScreenShowPasswordField": true,
+  "lockScreenPowerOffMonitorsOnLock": false,
   "enableFprint": false,
   "maxFprintTries": 15,
   "lockScreenActiveMonitor": "all",
@@ -425,6 +428,10 @@
           "enabled": true
         },
         {
+          "id": "dankKDEConnect",
+          "enabled": true
+        },
+        {
           "id": "dankPomodoroTimer",
           "enabled": true
         },
@@ -459,7 +466,7 @@
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
       "borderEnabled": false,
-      "borderColor": "surfaceText",
+      "borderColor": "primary",
       "borderOpacity": 1,
       "borderThickness": 1,
       "widgetOutlineEnabled": false,
@@ -481,7 +488,8 @@
       "shadowIntensity": 15,
       "shadowOpacity": 60,
       "shadowColorMode": "surface",
-      "shadowCustomColor": "#000000"
+      "shadowCustomColor": "#000000",
+      "clickThrough": false
     }
   ],
   "desktopClockEnabled": false,
@@ -558,168 +566,16 @@
       "enabled": true
     }
   },
-  "desktopWidgetInstances": [
-    {
-      "id": "dw_1768641309268_366clxjs3",
-      "widgetType": "desktopCommand",
-      "name": "Desktop Command",
-      "enabled": false,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "command": "echo -e \" ∧,,,∧\n(• ⩊ •)\n/     |\"",
-        "autoRefresh": false,
-        "commandTimeout": "1",
-        "refreshInterval": "5",
-        "fontSize": 22,
-        "backgroundOpacity": 80,
-        "enableBorder": false
-      },
-      "positions": {
-        "eDP-1": {
-          "width": 110,
-          "height": 110,
-          "x": 1000,
-          "y": 50
-        }
-      },
-      "group": "dwg_1768641721487_4z5kxmq8z"
-    },
-    {
-      "id": "dw_1768640607381_tbiqmxlwc",
-      "widgetType": "desktopClock",
-      "name": "Desktop Clock",
-      "enabled": false,
-      "config": {
-        "style": "stacked",
-        "transparency": 0.8,
-        "colorMode": "primary",
-        "customColor": "#ffffff",
-        "showDate": true,
-        "showAnalogNumbers": false,
-        "showAnalogSeconds": true,
-        "displayPreferences": [
-          "all"
-        ],
-        "showOnOverview": false,
-        "showOnOverlay": false,
-        "clickThrough": false,
-        "syncPositionAcrossScreens": false
-      },
-      "positions": {
-        "eDP-1": {
-          "width": 110,
-          "height": 160,
-          "x": 1000,
-          "y": 170
-        },
-        "_synced": {
-          "x": 0.4267935578330893,
-          "y": 0.3697916666666667,
-          "width": 200,
-          "height": 200
-        }
-      },
-      "group": "dwg_1768641721487_4z5kxmq8z"
-    },
-    {
-      "id": "dw_1768640695223_cjrhmrdji",
-      "widgetType": "dankDesktopWeather",
-      "name": "Dank Desktop Weather",
-      "enabled": false,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "viewMode": "detailed"
-      },
-      "positions": {
-        "eDP-1": {
-          "width": 240,
-          "height": 280,
-          "x": 1120,
-          "y": 50
-        }
-      },
-      "group": "dwg_1768641721487_4z5kxmq8z"
-    },
-    {
-      "id": "dw_1768640727079_6oztvftk0",
-      "widgetType": "mediaPlayer",
-      "name": "Media Player",
-      "enabled": false,
-      "config": {
-        "displayPreferences": [
-          "all"
-        ],
-        "borderOpacity": 10,
-        "clickThrough": false,
-        "syncPositionAcrossScreens": false,
-        "showOnOverviewOnly": false,
-        "showOnOverview": false,
-        "showOnOverlay": false
-      },
-      "positions": {
-        "eDP-1": {
-          "width": 360,
-          "height": 160,
-          "x": 1000,
-          "y": 340
-        },
-        "_synced": {
-          "x": 0.7320644216691069,
-          "y": 0.4427083333333333,
-          "width": 360,
-          "height": 160
-        }
-      },
-      "group": "dwg_1768641721487_4z5kxmq8z"
-    },
-    {
-      "id": "dw_1768640766725_ieylg0fy9",
-      "widgetType": "systemMonitor",
-      "name": "System Monitor",
-      "enabled": false,
-      "config": {
-        "showHeader": true,
-        "transparency": 0.8,
-        "colorMode": "primary",
-        "customColor": "#ffffff",
-        "showCpu": true,
-        "showCpuGraph": true,
-        "showCpuTemp": true,
-        "showGpuTemp": false,
-        "gpuPciId": "",
-        "showMemory": true,
-        "showMemoryGraph": true,
-        "showNetwork": true,
-        "showNetworkGraph": true,
-        "showDisk": true,
-        "showTopProcesses": false,
-        "topProcessCount": 3,
-        "topProcessSortBy": "cpu",
-        "layoutMode": "auto",
-        "graphInterval": 60,
-        "displayPreferences": [
-          "all"
-        ]
-      },
-      "positions": {
-        "eDP-1": {
-          "width": 360,
-          "height": 250,
-          "x": 1000,
-          "y": 510
-        }
-      },
-      "group": "dwg_1768641721487_4z5kxmq8z"
-    }
-  ],
+  "desktopWidgetInstances": [],
   "desktopWidgetGroups": [
     {
       "id": "dwg_1768641721487_4z5kxmq8z",
-      "name": "🌸🌸🌸",
+      "name": "🌸🌸",
+      "collapsed": false
+    },
+    {
+      "id": "dwg_1768921310478_fersbgqyr",
+      "name": "h",
       "collapsed": false
     }
   ],

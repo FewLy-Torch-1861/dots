@@ -1,3 +1,8 @@
+
+if status is-interactive
+	set -g fish_greeting
+end
+
 zoxide init fish | source
 source (/usr/bin/starship init fish --print-full-init | psub)
 
@@ -121,7 +126,8 @@ function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"
     if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        builtin cd -- "$cwd"
+        # builtin cd -- "$cwd"
+        z -- "$cwd"
     end
     rm -f -- "$tmp"
 end

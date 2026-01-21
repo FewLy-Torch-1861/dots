@@ -2,7 +2,6 @@ binds {
     Alt+Ctrl+Delete hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Alt+space hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Ctrl+Shift+Escape hotkey-overlay-title="Task Manager: Toggle" { spawn "dms" "ipc" "call" "processlist" "toggle"; }
-    Ctrl+space hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Super+A hotkey-overlay-title="Control Center: Toggle" { spawn "dms" "ipc" "call" "control-center" "toggle"; }
     Super+Alt+B hotkey-overlay-title="Media: Previous Track" { spawn "dms" "ipc" "call" "mpris" "previous"; }
     Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
@@ -20,7 +19,7 @@ binds {
     XF86MonBrightnessDown hotkey-overlay-title="Brightness Down (10%)" { spawn "dms" "ipc" "call" "brightness" "decrement" "10" ""; }
     XF86MonBrightnessUp hotkey-overlay-title="Brightness Up (10%)" { spawn "dms" "ipc" "call" "brightness" "increment" "10" ""; }
     Shift+Super+WheelScrollDown cooldown-ms=100 hotkey-overlay-title="Move to Workspace Down" { move-window-down-or-to-workspace-down; }
-    Shift+Super+WheelScrollUp hotkey-overlay-title="Move to Workspace Up" cooldown-ms=100 { move-window-up-or-to-workspace-up; }
+    Shift+Super+WheelScrollUp cooldown-ms=100 hotkey-overlay-title="Move to Workspace Up" { move-window-up-or-to-workspace-up; }
     Super+0 hotkey-overlay-title="Focus Workspace (by index)" { focus-workspace 0; }
     Super+1 hotkey-overlay-title="Focus Workspace (by index)" { focus-workspace 1; }
     Super+2 hotkey-overlay-title="Focus Workspace (by index)" { focus-workspace 2; }

@@ -16,7 +16,8 @@
     "footer": {
       "hideSandboxStatus": true,
       "hideContextPercentage": false
-    }
+    },
+    "theme": "Default"
   },
   "context": {
     "loadMemoryFromIncludeDirectories": true
