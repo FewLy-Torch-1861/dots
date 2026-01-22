@@ -45,7 +45,6 @@
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
   "workbench.activityBar.location": "bottom",
-  "workbench.colorTheme": "Dynamic Base16 DankShell",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
@@ -59,5 +58,6 @@
   "editor.stickyScroll.scrollWithEditor": false,
   "editor.stickyScroll.enabled": false,
   "terminal.integrated.stickyScroll.enabled": false,
-  "python.analysis.typeCheckingMode": "standard"
+  "python.analysis.typeCheckingMode": "standard",
+  "workbench.colorTheme": "Catppuccin Mocha"
 }
