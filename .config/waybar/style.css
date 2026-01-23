@@ -45,6 +45,23 @@ tooltip label {
   background: @green;
 }
 
+#battery.critical {
+  padding: 3px 20px;
+  color: @base;
+  background: @red;
+}
+
+#battery.warning {
+  padding: 3px 15px;
+  color: @base;
+  background: @yellow;
+}
+
+#battery.full {
+  color: @base;
+  background: @green;
+}
+
 #workspaces:hover,
 #tray:hover {
   padding: 3px 10px;

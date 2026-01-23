@@ -16,6 +16,7 @@
   ],
   "battery": {
     "format": "{icon} {capacity}%",
+    "format-charging": "󱐋{icon} {capacity}%",
     "format-icons": [
       "",
       "",
@@ -23,11 +24,13 @@
       "",
       ""
     ],
-    "interval": 60,
+    "interval": 1,
     "max-length": 25,
     "states": {
       "critical": 15,
-      "warning": 30
+      "warning": 30,
+      "normal": 78,
+      "full": 100
     },
     "tooltip": false
   },
