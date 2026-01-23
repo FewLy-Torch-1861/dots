@@ -27,7 +27,7 @@ window#waybar {
 
 tooltip {
   border-radius: 1em;
-  background: @base;
+  background: @surface0;
 }
 
 tooltip label {
@@ -62,6 +62,13 @@ tooltip label {
   background: @green;
 }
 
+#battery.charging.critical,
+#battery.charging.warning {
+  color: @text;
+  background: @surface0;
+}
+
+
 #workspaces:hover,
 #tray:hover {
   padding: 3px 10px;
@@ -76,7 +83,7 @@ tooltip label {
 #tray menu {
   padding: 10px 0px;
   border-radius: 1em;
-  background: @base;
+  background: @surface0;
 }
 
 #tray menuitem {
