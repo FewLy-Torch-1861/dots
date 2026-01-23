@@ -1,13 +1,12 @@
-
-if status is-interactive
-	set -g fish_greeting
-end
-
-zoxide init fish | source
-source (/usr/bin/starship init fish --print-full-init | psub)
-
 # ── Env ────────────────────────────────
 set -Ux GOPATH "$HOME/.go"
+set -Ux FZF_DEFAULT_OPTS "\
+--color=bg+:#313244,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"
+
 fish_add_path "$HOME/.local/bin"
 
 # ── Aliases & Abbr ─────────────────────
@@ -130,4 +129,10 @@ function y
         z -- "$cwd"
     end
     rm -f -- "$tmp"
+end
+
+if status is-interactive
+    set -g fish_greeting
+    zoxide init fish | source
+    source (/usr/bin/starship init fish --print-full-init | psub)
 end

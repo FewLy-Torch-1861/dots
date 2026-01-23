@@ -1,4 +1,10 @@
 {
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "chat.commandCenter.enabled": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
@@ -10,6 +16,8 @@
   "editor.mouseWheelZoom": true,
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.stickyScroll.scrollWithEditor": false,
   "editor.tabSize": 2,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -19,23 +27,25 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "http.systemCertificatesNode": true,
+  "python.analysis.typeCheckingMode": "standard",
   "redhat.telemetry.enabled": true,
   "shellformat.effectLanguages": [
-    "shellscript",
-    "dockerfile",
-    "dotenv",
-    "hosts",
-    "jvmoptions",
-    "ignore",
-    "gitignore",
-    "properties",
-    "spring-boot-properties",
     "azcli",
     "bats",
-    "fish"
+    "dockerfile",
+    "dotenv",
+    "fish",
+    "gitignore",
+    "hosts",
+    "ignore",
+    "jvmoptions",
+    "properties",
+    "shellscript",
+    "spring-boot-properties"
   ],
   "terminal.integrated.enableImages": true,
   "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.stickyScroll.enabled": false,
   "update.mode": "none",
   "vim.useSystemClipboard": true,
   "window.commandCenter": false,
@@ -45,19 +55,13 @@
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
   "workbench.activityBar.location": "bottom",
-  "workbench.colorTheme": "Dynamic Base16 DankShell",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
   "workbench.navigationControl.enabled": false,
-  "workbench.preferredDarkColorTheme": "Gruvbox Material Dark",
-  "workbench.preferredLightColorTheme": "Gruvbox Material Light",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
-  "workbench.tree.enableStickyScroll": false,
-  "editor.stickyScroll.scrollWithEditor": false,
-  "editor.stickyScroll.enabled": false,
-  "terminal.integrated.stickyScroll.enabled": false,
-  "python.analysis.typeCheckingMode": "standard"
+  "workbench.tree.enableStickyScroll": false
 }

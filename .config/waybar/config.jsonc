@@ -1,0 +1,88 @@
+// -*- mode: jsonc -*-
+{
+  "reload_style_on_change": true,
+  "modules-left": [
+    "mpris",
+    "hyprland/submap"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "interval": 60,
+    "max-length": 25,
+    "states": {
+      "critical": 15,
+      "warning": 30
+    },
+    "tooltip": false
+  },
+  "clock": {
+    "format": " {:%H:%M}",
+    "interval": 60,
+    "tooltip": false
+  },
+  "hyprland/submap": {
+    "on-click": "hyprctl dispatch submap reset",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    },
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "tooltip": false
+  },
+  "mpris": {
+    "format": " {artist} - {title}",
+    "format-paused": " {artist} - {title}",
+    "interval": 0,
+    "max-length": 35,
+    "on-click": "playerctl play-pause",
+    "on-click-middle": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "format-muted": "",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "scroll-step": 5,
+    "tooltip": false
+  },
+  "tray": {
+    "show-passive-items": true,
+    "tooltip": false
+  }
+}

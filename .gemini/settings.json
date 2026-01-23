@@ -7,7 +7,7 @@
   "general": {
     "previewFeatures": true,
     "vimMode": false,
-    "enablePromptCompletion": true,
+    "enablePromptCompletion": false,
     "preferredEditor": "neovim"
   },
   "ui": {
@@ -17,10 +17,13 @@
       "hideSandboxStatus": true,
       "hideContextPercentage": false
     },
-    "theme": "Default"
+    "theme": "/home/nutt/.gemini/themes/catppuccin-mocha.json"
   },
   "context": {
-    "loadMemoryFromIncludeDirectories": true
+    "loadMemoryFromIncludeDirectories": true,
+    "fileFiltering": {
+      "respectGitIgnore": false
+    }
   },
   "tools": {
     "shell": {
