@@ -1,0 +1,103 @@
+@import "../hypr/colors/mocha.css";
+
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font, monospace, Noto Sans Thai, Noto Color Emoji, Noto Sans Mono CJK JP";
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+window#waybar {
+  background: alpha(@base, 0.75);
+  color: @text;
+}
+
+.module {
+  margin: 4px;
+  padding: 3px 10px;
+  border-radius: 1em;
+  background: @surface0;
+}
+
+.module:hover {
+  padding: 3px 20px;
+  color: @base;
+  background: @pink;
+}
+
+tooltip {
+  border-radius: 1em;
+  background: @base;
+}
+
+tooltip label {
+  padding: 0 10px;
+  color: @text;
+}
+
+#submap {
+  color: @base;
+  background: @pink;
+}
+
+#submap.resize,
+#submap.sys-apps {
+  background: @green;
+}
+
+#workspaces:hover,
+#tray:hover {
+  padding: 3px 10px;
+  color: @text;
+  background: @surface0;
+}
+
+#tray image {
+  padding: 0px 2px;
+}
+
+#tray menu {
+  padding: 10px 0px;
+  border-radius: 1em;
+  background: @base;
+}
+
+#tray menuitem {
+  margin: 0px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+#tray menuitem:hover {
+  margin: 0px 10px;
+  border-radius: 1em;
+  background: @overlay0;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: 1em;
+  background: @surface1;
+  transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+  background: @overlay0;
+}
+
+#workspaces button.active {
+  padding: 0 20px;
+  color: @base;
+  background: @pink;
+}
+
+#workspaces button.urgent {
+  padding: 0 15px;
+  color: @base;
+  background: @red;
+}
+
+#workspaces button *,
+#tray menuitem * {
+  transition: none;
+}
