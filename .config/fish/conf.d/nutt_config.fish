@@ -133,7 +133,6 @@ end
 
 if status is-interactive
     set -g fish_greeting
-    hf
     zoxide init fish | source
     source (/usr/bin/starship init fish --print-full-init | psub)
 end
