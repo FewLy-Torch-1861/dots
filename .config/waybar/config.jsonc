@@ -3,6 +3,7 @@
   "reload_style_on_change": true,
   "modules-left": [
     "mpris",
+    "cava",
     "hyprland/submap"
   ],
   "modules-center": [
@@ -81,7 +82,7 @@
         ""
       ]
     },
-    "format-muted": "",
+    "format-muted": " muted",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "scroll-step": 5,
     "tooltip": false

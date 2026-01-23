@@ -64,10 +64,22 @@ tooltip label {
 
 #battery.charging.critical,
 #battery.charging.warning {
+  padding: 3px 10px;
   color: @text;
   background: @surface0;
 }
 
+#battery.charging:hover,
+#battery:hover {
+  padding: 3px 20px;
+  color: @base;
+  background: @pink;
+}
+
+#mpris.playing {
+  color: @base;
+  background: @pink;
+}
 
 #workspaces:hover,
 #tray:hover {
