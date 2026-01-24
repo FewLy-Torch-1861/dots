@@ -81,6 +81,16 @@ tooltip label {
   background: @pink;
 }
 
+#mpris:hover {
+  color: @base;
+  background: @green;
+}
+
+#mpris.playing:hover {
+  color: @base;
+  background: @yellow;
+}
+
 #workspaces:hover,
 #tray:hover {
   padding: 3px 10px;
