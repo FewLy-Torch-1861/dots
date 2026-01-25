@@ -17,6 +17,7 @@ alias c clear
 alias q exit
 alias reload 'exec fish'
 alias t tmux
+alias cd z
 alias ff fastfetch
 alias hf hyfetch
 
