@@ -10,11 +10,15 @@ return {
           lsp_format = "fallback", -- not recommended to change
         },
         formatters_by_ft = {
-          lua = { "stylua" },
+          bash = { "shfmt" },
+          css = { "prettier" },
           fish = { "fish_indent" },
-          sh = { "shfmt" },
-          go = { "gofmt" },
+          go = { "gofmt", "goimports" },
+          lua = { "stylua" },
+          luau = { "stylua" },
           python = { "black" },
+          sh = { "shfmt" },
+          toml = { "taplo" },
         },
         -- The options you set here will be merged with the builtin formatters.
         -- You can also define any custom formatters here.

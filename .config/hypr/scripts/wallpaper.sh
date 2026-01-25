@@ -10,7 +10,7 @@ WALLPAPER_DIR="$HOME"/Pictures/Wallpapers
 CACHE_DIR="$HOME/.cache/thumbnails/wallpapers"
 
 if [[ ! -d "$CACHE_DIR" ]]; then
-    mkdir -p "$CACHE_DIR"
+  mkdir -p "$CACHE_DIR"
 fi
 
 if [[ $1 == "waybar" ]]; then
@@ -19,12 +19,12 @@ fi
 
 choice=$(find "${WALLPAPER_DIR}" -type f | while read -r file; do
   filename="${file#"$WALLPAPER_DIR"/}"
-  
+
   hash=$(echo -n "$file" | md5sum | cut -d' ' -f1)
   thumb="${CACHE_DIR}/${hash}.png"
 
   if [ ! -f "$thumb" ]; then
-      magick "$file" -thumbnail '500x500>' -strip "$thumb"
+    magick "$file" -thumbnail '500x500>' -strip "$thumb"
   fi
 
   echo -en "${filename}\0icon\x1f${thumb}\n"

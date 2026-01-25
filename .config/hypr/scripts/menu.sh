@@ -24,25 +24,25 @@ if [[ -n "$choice" ]]; then
   case "$choice" in
   "${OPTIONS[0]}")
     rofi -show drun -show-icons
-    ;; 
+    ;;
 
   "${OPTIONS[1]}")
     rofi -modi filebrowser -show-icons -show filebrowser
-    ;; 
+    ;;
 
   "${OPTIONS[2]}")
     "${SCRIPT_DIR}/clipboard.sh" "$@"
-    ;; 
+    ;;
 
   "${OPTIONS[3]}")
     "${SCRIPT_DIR}/settings.sh" "$@"
-    ;; 
+    ;;
 
   "${OPTIONS[4]}")
     "${SCRIPT_DIR}/power.sh" "$@"
-    ;; 
+    ;;
   *)
     exit 1
-    ;; 
+    ;;
   esac
 fi
