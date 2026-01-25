@@ -2,6 +2,7 @@
 {
   "reload_style_on_change": true,
   "modules-left": [
+    "custom/menu",
     "mpris",
     "cava",
     "hyprland/submap"
@@ -42,6 +43,11 @@
     "interval": 1,
     "tooltip": false
   },
+  "custom/menu": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
   "hyprland/submap": {
     "on-click": "hyprctl dispatch submap reset",
     "tooltip": false
@@ -72,8 +78,8 @@
     "on-click": "playerctl play-pause",
     "on-click-middle": "playerctl previous",
     "on-click-right": "playerctl next",
-    "on-scroll-up": "playerctl volume 0.1+",
     "on-scroll-down": "playerctl volume 0.1-",
+    "on-scroll-up": "playerctl volume 0.1+",
     "tooltip": false
   },
   "pulseaudio": {

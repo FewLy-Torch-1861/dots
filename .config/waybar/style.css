@@ -35,6 +35,15 @@ tooltip label {
   color: @text;
 }
 
+#custom-menu {
+  font-family: JetBrainsMono Nerd Font Propo;
+}
+
+#custom-menu:hover {
+  background: @blue;
+  color: @base;
+}
+
 #submap {
   color: @base;
   background: @pink;
