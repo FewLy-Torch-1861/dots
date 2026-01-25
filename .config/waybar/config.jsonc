@@ -46,6 +46,7 @@
   "custom/menu": {
     "format": "󰣇",
     "on-click": "~/.config/hypr/scripts/menu.sh waybar",
+    "on-click-right": "~/.config/hypr/scripts/power.sh waybar",
     "tooltip": false
   },
   "hyprland/submap": {

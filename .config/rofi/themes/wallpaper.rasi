@@ -1,0 +1,24 @@
+@import "mine.rasi"
+
+window {
+  width: 99%;
+  height: 72%;
+}
+
+mainbox {
+  children: [ listview ];
+}
+
+listview {
+  columns: 4;
+  lines: 2;
+}
+
+element {
+  children: [ element-icon ];
+  padding: -30px 5px;
+}
+
+element-icon {
+  size: 14em;
+}
