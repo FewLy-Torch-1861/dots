@@ -29,20 +29,7 @@
   "http.systemCertificatesNode": true,
   "python.analysis.typeCheckingMode": "standard",
   "redhat.telemetry.enabled": true,
-  "shellformat.effectLanguages": [
-    "azcli",
-    "bats",
-    "dockerfile",
-    "dotenv",
-    "fish",
-    "gitignore",
-    "hosts",
-    "ignore",
-    "jvmoptions",
-    "properties",
-    "shellscript",
-    "spring-boot-properties"
-  ],
+  "shellformat.path": "/home/nutt/.go/bin/shfmt",
   "terminal.integrated.enableImages": true,
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.stickyScroll.enabled": false,
@@ -63,5 +50,8 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
-  "workbench.tree.enableStickyScroll": false
+  "workbench.tree.enableStickyScroll": false,
+  "[shellscript]": {
+    "editor.defaultFormatter": "lumirelle.shell-format-rev"
+  }
 }

@@ -45,7 +45,7 @@
   },
   "custom/menu": {
     "format": "󰣇",
-    "on-click": "rofi -show drun",
+    "on-click": "~/.config/hypr/scripts/menu.sh waybar",
     "tooltip": false
   },
   "hyprland/submap": {

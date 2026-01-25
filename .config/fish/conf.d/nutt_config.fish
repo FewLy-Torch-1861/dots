@@ -7,7 +7,9 @@ set -Ux FZF_DEFAULT_OPTS "\
 --color=selected-bg:#45475A \
 --color=border:#6C7086,label:#CDD6F4"
 
-fish_add_path "$HOME/.local/bin"
+fish_add_path \
+    "$HOME/.local/bin" \
+    "$HOME/.go/bin"
 
 # ── Aliases & Abbr ─────────────────────
 # Core shortcuts
@@ -81,7 +83,6 @@ abbr --add rmpkg 'yay -Rns (yay -Qetq | fzf -e)'
 alias ded 'find . -type d -empty -delete'
 alias def 'find . -type f -empty -delete'
 alias dbl 'find . -xtype l -delete'
-
 
 # ── Functions ──────────────────────────
 

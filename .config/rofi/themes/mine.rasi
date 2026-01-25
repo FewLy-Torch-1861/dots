@@ -79,7 +79,9 @@ window {
   padding:          5;
   background-color: @background;
   border:           1;
-  border-radius: 12px;
+  border-radius:    12px;
+  width:            40%;
+  height:           68%;
 }
 
 mainbox {
@@ -131,7 +133,7 @@ prompt {
   text-color: @normal-foreground;
 }
 textbox-prompt-colon {
-  margin:     0px 0.3000em 0.0000em 0.0000em ;
+  margin:     0px 0.2000em 0.0000em 0.0000em ;
   expand:     false;
   str:        "";
   text-color: inherit;
