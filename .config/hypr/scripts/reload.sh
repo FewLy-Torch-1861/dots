@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
-pkill waybar || true && waybar
+pkill -USR2 waybar
 pkill -USR2 kitty
 
 makoctl reload
 hyprctl reload
 
-chmod +x ~/.config/hypr/scripts/*
+if [[ $1 == "hard" ]]; then
+  pkill waybar || true && waybar
+  pkill mako || true && mako daemon
+  rm -rf "$HOME"/.cache/thumbnails/wallpapers/*
+  chmod +x ~/.config/hypr/scripts/*
+fi
