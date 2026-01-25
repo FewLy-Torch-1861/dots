@@ -1,5 +1,5 @@
 max-history=10
-sort=+time
+sort=-time
 
 font=JetBrainsMono Nerd Font 10
 width=425

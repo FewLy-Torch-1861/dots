@@ -1,0 +1,56 @@
+* {
+  rosewater: #f5e0dc;
+  flamingo:  #f2cdcd;
+  pink:      #f5c2e7;
+  mauve:     #cba6f7;
+  red:       #f38ba8;
+  maroon:    #eba0ac;
+  peach:     #fab387;
+  yellow:    #f9e2af;
+  green:     #a6e3a1;
+  teal:      #94e2d5;
+  sky:       #89dceb;
+  sapphire:  #74c7ec;
+  blue:      #89b4fa;
+  lavender:  #b4befe;
+  text:      #cdd6f4;
+  subtext1:  #bac2de;
+  subtext0:  #a6adc8;
+  overlay2:  #9399b2;
+  overlay1:  #7f849c;
+  overlay0:  #6c7086;
+  surface2:  #585b70;
+  surface1:  #45475a;
+  surface0:  #313244;
+  base:      #1e1e2e;
+  mantle:    #181825;
+  crust:     #11111b;
+
+  rosewater-blr: #f5e0dc80;
+  flamingo-blr:  #f2cdcd80;
+  pink-blr:      #f5c2e780;
+  mauve-blr:     #cba6f780;
+  red-blr:       #f38ba880;
+  maroon-blr:    #eba0ac80;
+  peach-blr:     #fab38780;
+  yellow-blr:    #f9e2af80;
+  green-blr:     #a6e3a180;
+  teal-blr:      #94e2d580;
+  sky-blr:       #89dceb80;
+  sapphire-blr:  #74c7ec80;
+  blue-blr:      #89b4fa80;
+  lavender-blr:  #b4befe80;
+  text-blr:      #cdd6f480;
+  subtext1-blr:  #bac2de80;
+  subtext0-blr:  #a6adc880;
+  overlay2-blr:  #9399b280;
+  overlay1-blr:  #7f849c80;
+  overlay0-blr:  #6c708680;
+  surface2-blr:  #585b7080;
+  surface1-blr:  #45475a80;
+  surface0-blr:  #31324480;
+  base-blr:      #1e1e2e80;
+  mantle-blr:    #18182580;
+  crust-blr:     #11111b80;
+}
+
