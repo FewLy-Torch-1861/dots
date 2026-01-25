@@ -1,15 +1,16 @@
 configuration {
-  modi: "drun";
-  font: "JetBrainsMono Nerd Font 12";
-  display-drun: " ";
+  modi:                "drun";
+  font:                "JetBrainsMono Nerd Font 12";
+  display-drun:        " ";
   display-filebrowser: " ";
+  case-sensitive: false;
   timeout {
-      action: "kb-cancel";
-      delay:  0;
+    action: "kb-cancel";
+    delay:  0;
   }
   filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
+    directories-first: true;
+    sorting-method:    "name";
   }
 }
 
