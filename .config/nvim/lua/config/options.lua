@@ -8,7 +8,7 @@ vim.g.snacks_animate = true
 local opt = vim.opt
 
 opt.autowrite = true -- Enable auto write
-opt.clipboard = vim.env.SSH_CONNECTION and "" or "unnamedplus" -- Sync with system clipboard
+opt.clipboard = "unnamedplus" -- Sync with system clipboard
 opt.expandtab = true -- Use spaces instead of tabs
 opt.shiftround = true -- Round indent
 opt.shiftwidth = 2 -- Size of an indent
