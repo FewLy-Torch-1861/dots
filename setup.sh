@@ -38,6 +38,7 @@ if [ "$EUID" -eq 0 ]; then
 fi
 
 log "${RED}THIS SCRIPT IS NOT TESTED, USE AT YOUR OWN RISK.${NC}"
+log "feel free to test and fix it and open PRs :3"
 
 while true; do
   read -rp "Do you want to proceed? (y/N): " yn
@@ -201,3 +202,4 @@ if command -v fish &>/dev/null; then
 fi
 
 success "Installation complete. Please reboot."
+
