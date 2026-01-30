@@ -93,6 +93,7 @@
     },
     "format-muted": " muted",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "hyprctl dispatch -- exec \"[float; size (monitor_w*0.85) (monitor_h*0.80)]\" kitty -1 fish -c pulsemixer",
     "scroll-step": 5,
     "tooltip": false
   },
