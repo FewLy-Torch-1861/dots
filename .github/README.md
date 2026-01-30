@@ -6,8 +6,8 @@ A collection of configuration files for my Linux setup, focusing on the **Catppu
 
 ## 🖼️ Overview
 
-- **OS:** Linux (Arch/Hyprland likely, given the configs)
-- **WM:** [Hyprland](https://hyprland.org/)
+- **OS:** [ArchLinux](https://archlinux.org/)
+- **WM:** [Hyprland](https://hypr.land/)
 - **Shell:** [Fish](https://fishshell.com/) + [Starship](https://starship.rs/)
 - **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/)
 - **Editor:** [Neovim](https://neovim.io/)
