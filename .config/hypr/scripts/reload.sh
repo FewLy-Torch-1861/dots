@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pkill -USR2 waybar
+pkill -USR2 waybar || waybar &
 pkill -USR1 kitty
 
 pkill hypridle | true && hypridle

@@ -2,7 +2,7 @@
 
 * {
   all: unset;
-  font-family: "JetBrainsMono Nerd Font, monospace, Noto Sans Thai, Noto Color Emoji, Noto Sans Mono CJK JP";
+  font-family: "JetBrainsMono Nerd Font Propo, monospace, Noto Sans Thai, Noto Color Emoji, Noto Sans Mono CJK JP";
   font-size: 14px;
   transition: all 0.2s ease-in-out;
 }
@@ -35,10 +35,6 @@ tooltip label {
   color: @text;
 }
 
-#custom-menu {
-  font-family: JetBrainsMono Nerd Font Propo;
-}
-
 #custom-menu:hover {
   background: @blue;
   color: @base;
@@ -54,12 +50,16 @@ tooltip label {
   background: @green;
 }
 
+#cpu.critical,
+#memory.critical,
 #battery.critical {
   padding: 3px 20px;
   color: @base;
   background: @red;
 }
 
+#cpu.high,
+#memory.high,
 #battery.warning {
   padding: 3px 15px;
   color: @base;
