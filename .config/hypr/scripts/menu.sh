@@ -4,7 +4,7 @@ source "$HOME/.config/hypr/scripts/env.sh"
 
 pkill rofi || true
 
-ROFI_CMD=(rofi -dmenu -i -p " " -u 5 -theme "${ROFI_THEME_MENU}")
+ROFI_CMD=(rofi -dmenu -i -p " " -u 6 -theme "${ROFI_THEME_MENU}")
 
 if [[ $1 == "waybar" ]]; then
   ROFI_CMD+=(-theme-str "${ROFI_WAYBAR_POS}")
@@ -13,6 +13,7 @@ fi
 OPTIONS=(
   " Apps"
   " Files"
+  " Capture"
   " Clipboard"
   "󰞅 Emoji"
   " Settings"
@@ -32,18 +33,22 @@ if [[ -n "$choice" ]]; then
     ;;
 
   "${OPTIONS[2]}")
-    "${SCRIPT_DIR}/clipboard.sh" "$@"
+    "${SCRIPT_DIR}/capture.sh" "$@"
     ;;
 
   "${OPTIONS[3]}")
-    "${SCRIPT_DIR}/emoji.sh" "$@"
+    "${SCRIPT_DIR}/clipboard.sh" "$@"
     ;;
 
   "${OPTIONS[4]}")
-    "${SCRIPT_DIR}/settings.sh" "$@"
+    "${SCRIPT_DIR}/emoji.sh" "$@"
     ;;
 
   "${OPTIONS[5]}")
+    "${SCRIPT_DIR}/settings.sh" "$@"
+    ;;
+
+  "${OPTIONS[6]}")
     "${SCRIPT_DIR}/power.sh" "$@"
     ;;
   *)
