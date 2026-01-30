@@ -27,9 +27,8 @@ alias pls sudo
 abbr --add chafa 'chafa -f symbols'
 
 # Dotfiles
-alias dot "git --git-dir $HOME/.dots/ --work-tree $HOME"
-alias ld "lazygit --git-dir $HOME/.dots/ --work-tree $HOME"
-alias dotstat "dot config status.showUntrackedFiles yes && dot status && dot config status.showUntrackedFiles no"
+alias dot "cd ~/.dots"
+alias ld "lazygit -p ~/.dots"
 
 # LLMs
 alias gem gemini
