@@ -5,4 +5,6 @@ LICENSE.*
 setup.sh
 \.DS_Store
 .+~
+assets
+.stow-local-ignore
 
