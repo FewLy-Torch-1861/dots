@@ -1,6 +1,0 @@
-@import "mine.rasi"
-
-window {
-  width: 20%;
-  height: 40%;
-}

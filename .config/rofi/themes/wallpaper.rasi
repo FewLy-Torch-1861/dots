@@ -1,10 +1,5 @@
 @import "mine.rasi"
 
-window {
-  width: 99%;
-  height: 72%;
-}
-
 mainbox {
   children: [ listview ];
 }

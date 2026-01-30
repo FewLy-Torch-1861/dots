@@ -4,7 +4,7 @@ source "$HOME/.config/hypr/scripts/env.sh"
 
 pkill rofi || true
 
-ROFI_CMD=(rofi -dmenu -i -p " " -theme-str "#window { height: 26%; }" -theme "${ROFI_THEME_MENU}")
+ROFI_CMD=(rofi -dmenu -i -p " " -theme "${ROFI_THEME_BASE}" -theme-str "${ROFI_SIZE_CAPTURE}")
 
 if [[ $1 == "waybar" ]]; then
   ROFI_CMD+=(-theme-str "${ROFI_WAYBAR_POS}")

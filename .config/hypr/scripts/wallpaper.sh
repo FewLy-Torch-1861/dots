@@ -4,7 +4,7 @@ source "$HOME/.config/hypr/scripts/env.sh"
 
 pkill rofi || true
 
-ROFI_CMD=(rofi -dmenu -i -p "󰸉 " -show-icons -theme "${ROFI_THEME_WALLPAPER}")
+ROFI_CMD=(rofi -dmenu -i -p "󰸉 " -show-icons -theme "${ROFI_THEME_WALLPAPER}" -theme-str "${ROFI_SIZE_WALLPAPER}")
 
 WALLPAPER_DIR="$HOME"/Pictures/Wallpapers
 CACHE_DIR="$HOME/.cache/thumbnails/wallpapers"
