@@ -3,6 +3,7 @@ configuration {
   font:                "JetBrainsMono Nerd Font 12";
   display-drun:        " ";
   display-filebrowser: " ";
+  display-emoji:       "󰞅 ";
   case-sensitive: false;
   timeout {
     action: "kb-cancel";

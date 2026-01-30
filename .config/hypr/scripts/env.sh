@@ -11,3 +11,5 @@ ROFI_THEME_WALLPAPER="$HOME/.config/rofi/themes/wallpaper.rasi"
 
 # Waybar Positioning (Top Left)
 ROFI_WAYBAR_POS='#window { anchor: north west; location: north west; x-offset: 6px; y-offset: 6px; }'
+
+HYPRSHOT_DIR="$HOME/Pictures/Screenshots/"
