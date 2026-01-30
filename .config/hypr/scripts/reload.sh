@@ -3,6 +3,8 @@
 pkill -USR2 waybar
 pkill -USR2 kitty
 
+pkill hypridle | true && hypridle
+
 makoctl reload
 hyprctl reload
 

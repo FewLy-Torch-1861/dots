@@ -7,7 +7,8 @@
   "general": {
     "previewFeatures": true,
     "preferredEditor": "neovim",
-    "disableAutoUpdate": true
+    "disableAutoUpdate": true,
+    "enableAutoUpdate": false
   },
   "ui": {
     "hideTips": true,
