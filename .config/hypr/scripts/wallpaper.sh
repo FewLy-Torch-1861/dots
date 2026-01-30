@@ -39,5 +39,6 @@ if [[ "$choice" == "Random" ]]; then
 fi
 
 if [[ -n "$choice" ]]; then
+  ln -sf "${WALLPAPER_DIR}/${choice}" "$HOME/.cache/current_wall"
   swww img -t any --transition-duration 2 --transition-step 100 --transition-fps 60 "${WALLPAPER_DIR}"/"${choice}"
 fi
