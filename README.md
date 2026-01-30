@@ -4,6 +4,12 @@
 
 A collection of configuration files for my ArchLinux and Hyprland setup.
 
+## 📸 Previews
+
+| ![Clean](assets/screenshots/clean.png) | ![Workflow](assets/screenshots/workflow.png) |
+| :---: | :---: |
+| ![Launcher](assets/screenshots/launcher.png) | ![Terminal](assets/screenshots/terminal.png) |
+
 ## 🖼️ Overview
 
 - **OS:** [ArchLinux](https://archlinux.org/)
