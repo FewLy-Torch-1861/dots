@@ -49,8 +49,8 @@ tooltip label {
   background: @pink;
 }
 
-#submap.resize,
-#submap.sys-apps {
+#submap.group,
+#submap.resize {
   background: @green;
 }
 
