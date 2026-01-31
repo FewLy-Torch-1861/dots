@@ -15,13 +15,23 @@
   ],
   "modules-right": [
     "tray",
-    "network",
-    "pulseaudio",
-    "cpu",
-    "memory",
-    "battery",
+    "group/status",
     "clock"
   ],
+  //
+  // Grouped modules
+  //
+  "group/status": {
+    "orientation": "inherit",
+    "modules": [
+      "cpu",
+      "memory",
+      "pulseaudio",
+      "bluetooth",
+      "network",
+      "battery"
+    ]
+  },
   //
   // Left modules
   //
@@ -32,8 +42,8 @@
     "tooltip": false
   },
   "mpris": {
-    "format-playing": " {artist} - {title}",
     "format-paused": " {artist} - {title}",
+    "format-playing": " {artist} - {title}",
     "interval": 0,
     "max-length": 45,
     "on-click": "playerctl play-pause",
@@ -75,30 +85,6 @@
     "show-passive-items": true,
     "tooltip": false
   },
-  "network": {
-    "format-alt": "󰛳 {ifname}: {ipaddr}/{cidr}",
-    "format-disconnected": "⚠ Disconnected",
-    "format-ethernet": "󰈀",
-    "format-wifi": "",
-    "on-click-right": "kitty -1 --class nmtui nmtui",
-    "tooltip-format": "󰛳 {ifname} via {gwaddr}",
-    "tooltip-format-ethernet": "󰈀 {ipaddr}/{cidr} 󰛳 {ifname} via {gwaddr}",
-    "tooltip-format-wifi": " {essid} 󰛳 {ifname} via {gwaddr}",
-  },
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-icons": {
-      "default": [
-        "",
-        ""
-      ]
-    },
-    "format-muted": " muted",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "kitty -1 --class pulsemixer pulsemixer",
-    "scroll-step": 5,
-    "tooltip": false
-  },
   "cpu": {
     "format": " {usage}%",
     "interval": 2,
@@ -117,9 +103,41 @@
     },
     "tooltip-format": " {used:0.1f}G/{total:0.1f}G\n󰍛 {swapUsed:0.1f}G/{swapTotal:0.1f}G"
   },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "format-muted": " muted",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "kitty -1 --class pulsemixer pulsemixer",
+    "scroll-step": 5,
+    "tooltip": false
+  },
+  "bluetooth": {
+    "format": "",
+    "format-connected": "",
+    "format-disabled": "",
+    "tooltip-format": "{controller_alias}: {controller_address}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t({device_address})"
+  },
+  "network": {
+    "format-alt": "󰛳 {ifname}: {ipaddr}/{cidr}",
+    "format-disconnected": "⚠ Disconnected",
+    "format-ethernet": "󰈀",
+    "format-wifi": "",
+    "on-click-right": "kitty -1 --class nmtui nmtui",
+    "tooltip-format": "󰛳 {ifname} via {gwaddr}",
+    "tooltip-format-ethernet": "󰈀 {ipaddr}/{cidr} 󰛳 {ifname} via {gwaddr}",
+    "tooltip-format-wifi": " {essid} 󰛳 {ifname} via {gwaddr}"
+  },
   "battery": {
-    "format": "{icon} {capacity}%",
-    "format-charging": "󱐋{icon} {capacity}%",
+    "format": "{icon}",
+    "format-charging": "󱐋{icon}",
     "format-full": "",
     "format-icons": [
       "",
@@ -132,16 +150,16 @@
     "max-length": 25,
     "states": {
       "critical": 15,
-      "warning": 30,
+      "full": 100,
       "normal": 78,
-      "full": 100
+      "warning": 30
     },
-    "tooltip": false
+    "tooltip-format": " {capacity}% (<i>{timeTo}</i>)\n {health}% Health"
   },
   "clock": {
     "format": " {:%R}",
     "format-alt": "󰃭 {:%A, %B %d, %Y |  %H:%M:%S}",
     "interval": 1,
     "tooltip": false
-  },
+  }
 }

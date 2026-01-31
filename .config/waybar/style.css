@@ -1,5 +1,6 @@
 @import "../hypr/colors/mocha.css";
 
+/* Global */
 * {
   all: unset;
   font-family: "JetBrainsMono Nerd Font Propo, monospace, Noto Sans Thai, Noto Color Emoji, Noto Sans Mono CJK JP";
@@ -8,25 +9,60 @@
 }
 
 window#waybar {
-  background: alpha(@base, 0.75);
+  background: transparent;
+  /* background: alpha(@base, 0.75); */
   color: @text;
 }
 
-.module {
-  margin: 4px;
+/* Base Module Styles */
+.module,
+#status {
+  margin: 6px 3px 1px 3px;
   padding: 3px 10px;
-  border-radius: 1em;
-  background: @surface0;
+  border-radius: 2em;
+  border: 1px solid @surface2;
+  background: alpha(@surface0, 0.75);
 }
 
+.modules-left:first-child {
+  margin-left: 6px;
+}
+
+.modules-right:last-child {
+  margin-right: 6px;
+}
+
+#status .module:hover,
 .module:hover {
   padding: 3px 20px;
   color: @base;
   background: @pink;
 }
 
+#status {
+  padding: 0;
+}
+
+#status .module {
+  background: transparent;
+  margin: 0;
+  border: none;
+  padding: 3px 6px;
+}
+
+#status:first-child {
+  padding-left: 10px;
+}
+
+#status:last-child {
+  padding-right: 10px;
+}
+
+/* Tooltip */
 tooltip {
+  padding: 10px;
   border-radius: 1em;
+  border: 1px solid @surface2;
   background: @surface0;
 }
 
@@ -35,54 +71,10 @@ tooltip label {
   color: @text;
 }
 
+/* Individual Modules */
 #custom-menu:hover {
   background: @blue;
   color: @base;
-}
-
-#submap {
-  color: @base;
-  background: @pink;
-}
-
-#submap.group,
-#submap.resize {
-  background: @green;
-}
-
-#cpu.critical,
-#memory.critical,
-#battery.critical {
-  padding: 3px 20px;
-  color: @base;
-  background: @red;
-}
-
-#cpu.high,
-#memory.high,
-#battery.warning {
-  padding: 3px 15px;
-  color: @base;
-  background: @yellow;
-}
-
-#battery.full {
-  color: @base;
-  background: @green;
-}
-
-#battery.charging.critical,
-#battery.charging.warning {
-  padding: 3px 10px;
-  color: @text;
-  background: @surface0;
-}
-
-#battery.charging:hover,
-#battery:hover {
-  padding: 3px 20px;
-  color: @base;
-  background: @pink;
 }
 
 #mpris.playing {
@@ -100,11 +92,37 @@ tooltip label {
   background: @yellow;
 }
 
-#workspaces:hover,
+#submap {
+  color: @base;
+  background: @pink;
+}
+
+#submap.group,
+#submap.resize {
+  background: @green;
+}
+
+#cpu.critical,
+#memory.critical,
+#battery.critical {
+  color: @red;
+}
+
+#cpu.high,
+#memory.high,
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.full {
+  color: @green;
+}
+
+/* Tray */
 #tray:hover {
   padding: 3px 10px;
   color: @text;
-  background: @surface0;
+  background: alpha(@surface0, 0.75);
 }
 
 #tray image {
@@ -112,20 +130,30 @@ tooltip label {
 }
 
 #tray menu {
-  padding: 10px 0px;
+  padding: 10px;
   border-radius: 1em;
+  border: 1px solid @surface2;
   background: @surface0;
 }
 
 #tray menuitem {
-  margin: 0px 20px;
-  transition: all 0.2s ease-in-out;
+  border-radius: 1em;
 }
 
 #tray menuitem:hover {
-  margin: 0px 10px;
-  border-radius: 1em;
   background: @overlay0;
+}
+
+#tray menuitem * {
+  padding: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Workspaces */
+#workspaces:hover {
+  padding: 3px 10px;
+  color: @text;
+  background: alpha(@surface0, 0.75);
 }
 
 #workspaces button {
@@ -152,7 +180,7 @@ tooltip label {
   background: @red;
 }
 
-#workspaces button *,
-#tray menuitem * {
+#workspaces button * {
   transition: none;
 }
+
