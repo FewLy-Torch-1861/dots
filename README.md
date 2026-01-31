@@ -1,4 +1,4 @@
-# 🍡 Dotfiles
+# 💫🪻 Midnight Bloom
 
 > "If it works on my machine, the problem is you."
 
