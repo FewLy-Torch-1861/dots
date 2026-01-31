@@ -1,4 +1,4 @@
-# 🍡 Dotfiles
+# 💫🪻 Midnight Bloom
 
 > "If it works on my machine, the problem is you."
 
@@ -9,6 +9,8 @@ A collection of configuration files for my ArchLinux and Hyprland setup.
 | ![Clean](assets/screenshots/clean.png) | ![Workflow](assets/screenshots/workflow.png) |
 | :---: | :---: |
 | ![Launcher](assets/screenshots/launcher.png) | ![Terminal](assets/screenshots/terminal.png) |
+
+*wallpapers source: [Bocchi-Chan by shiej007](https://www.pixiv.net/en/artworks/121912423), [Chisa by Skell.B](https://www.pixiv.net/en/artworks/139255914)*
 
 ## 🖼️ Overview
 
