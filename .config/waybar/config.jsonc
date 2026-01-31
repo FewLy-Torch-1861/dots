@@ -150,9 +150,9 @@
     "max-length": 25,
     "states": {
       "critical": 15,
-      "full": 100,
+      "warning": 30,
       "normal": 78,
-      "warning": 30
+      "full": 100
     },
     "tooltip-format": " {capacity}% (<i>{timeTo}</i>)\n {health}% Health"
   },
