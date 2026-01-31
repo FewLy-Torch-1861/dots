@@ -2,6 +2,9 @@
 {
   "reload_style_on_change": true,
   "spacing": 0, // will set in style.css
+  //
+  // Modules
+  //
   "modules-left": [
     "custom/menu",
     "mpris",
@@ -19,6 +22,101 @@
     "battery",
     "clock"
   ],
+  //
+  // Left modules
+  //
+  "custom/menu": {
+    "format": "󰣇",
+    "on-click": "~/.config/hypr/scripts/menu.sh waybar",
+    "on-click-right": "~/.config/hypr/scripts/power.sh waybar",
+    "tooltip": false
+  },
+  "mpris": {
+    "format-playing": " {artist} - {title}",
+    "format-paused": " {artist} - {title}",
+    "interval": 0,
+    "max-length": 45,
+    "on-click": "playerctl play-pause",
+    "on-click-middle": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "on-scroll-down": "playerctl volume 0.1-",
+    "on-scroll-up": "playerctl volume 0.1+",
+    "tooltip": false
+  },
+  "hyprland/submap": {
+    "on-click": "hyprctl dispatch submap reset",
+    "tooltip": false
+  },
+  //
+  // Center modules
+  //
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    },
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "tooltip": false
+  },
+  //
+  // Right modules
+  //
+  "tray": {
+    "show-passive-items": true,
+    "tooltip": false
+  },
+  "network": {
+    "format-alt": "󰛳 {ifname}: {ipaddr}/{cidr}",
+    "format-disconnected": "⚠ Disconnected",
+    "format-ethernet": "󰈀",
+    "format-wifi": "",
+    "on-click-right": "kitty -1 --class nmtui nmtui",
+    "tooltip-format": "󰛳 {ifname} via {gwaddr}",
+    "tooltip-format-ethernet": "󰈀 {ipaddr}/{cidr} 󰛳 {ifname} via {gwaddr}",
+    "tooltip-format-wifi": " {essid} 󰛳 {ifname} via {gwaddr}",
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "format-muted": " muted",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "kitty -1 --class pulsemixer pulsemixer",
+    "scroll-step": 5,
+    "tooltip": false
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 2,
+    "states": {
+      "high": 70,
+      "critical": 90
+    },
+    "tooltip": false
+  },
+  "memory": {
+    "format": " {}%",
+    "interval": 2,
+    "states": {
+      "high": 80,
+      "critical": 90
+    },
+    "tooltip-format": " {used:0.1f}G/{total:0.1f}G\n󰍛 {swapUsed:0.1f}G/{swapTotal:0.1f}G"
+  },
   "battery": {
     "format": "{icon} {capacity}%",
     "format-charging": "󱐋{icon} {capacity}%",
@@ -46,90 +144,4 @@
     "interval": 1,
     "tooltip": false
   },
-  "cpu": {
-    "format": " {usage}%",
-    "interval": 2,
-    "states": {
-      "high": 70,
-      "critical": 90
-    },
-    "tooltip": false
-  },
-  "custom/menu": {
-    "format": "󰣇",
-    "on-click": "~/.config/hypr/scripts/menu.sh waybar",
-    "on-click-right": "~/.config/hypr/scripts/power.sh waybar",
-    "tooltip": false
-  },
-  "hyprland/submap": {
-    "on-click": "hyprctl dispatch submap reset",
-    "tooltip": false
-  },
-  "hyprland/workspaces": {
-    "format": "{id}",
-    "format-icons": {
-      "1": "一",
-      "2": "二",
-      "3": "三",
-      "4": "四",
-      "5": "五",
-      "6": "六",
-      "7": "七",
-      "8": "八",
-      "9": "九",
-      "10": "十"
-    },
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "tooltip": false
-  },
-  "memory": {
-    "format": " {}%",
-    "interval": 2,
-    "states": {
-      "high": 80,
-      "critical": 90
-    },
-    "tooltip-format": " {used:0.1f}G/{total:0.1f}G\n󰍛 {swapUsed:0.1f}G/{swapTotal:0.1f}G"
-  },
-  "mpris": {
-    "format": " {artist} - {title}",
-    "format-paused": " {artist} - {title}",
-    "interval": 0,
-    "max-length": 35,
-    "on-click": "playerctl play-pause",
-    "on-click-middle": "playerctl previous",
-    "on-click-right": "playerctl next",
-    "on-scroll-down": "playerctl volume 0.1-",
-    "on-scroll-up": "playerctl volume 0.1+",
-    "tooltip": false
-  },
-  "network": {
-    "format-alt": "󰛳 {ifname}: {ipaddr}/{cidr}",
-    "format-disconnected": "⚠ Disconnected",
-    "format-ethernet": "󰈀",
-    "format-wifi": "",
-    "on-click-right": "kitty -1 --class nmtui nmtui",
-    "tooltip-format": "󰛳 {ifname} via {gwaddr}",
-    "tooltip-format-ethernet": "󰈀 {ipaddr}/{cidr} 󰛳 {ifname} via {gwaddr}",
-    "tooltip-format-wifi": " {essid} 󰛳 {ifname} via {gwaddr}",
-  },
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-icons": {
-      "default": [
-        "",
-        ""
-      ]
-    },
-    "format-muted": " muted",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "kitty -1 --class pulsemixer pulsemixer",
-    "scroll-step": 5,
-    "tooltip": false
-  },
-  "tray": {
-    "show-passive-items": true,
-    "tooltip": false
-  }
 }
