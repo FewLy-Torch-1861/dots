@@ -25,11 +25,11 @@ window#waybar {
 }
 
 .modules-left:first-child {
-  margin-left: 6px;
+  margin-left: 3px;
 }
 
 .modules-right:last-child {
-  margin-right: 6px;
+  margin-right: 3px;
 }
 
 #status .module:hover,
@@ -104,7 +104,8 @@ tooltip label {
 
 #cpu.critical,
 #memory.critical,
-#battery.critical {
+#battery.critical,
+#network.disconnected {
   color: @red;
 }
 
@@ -183,4 +184,3 @@ tooltip label {
 #workspaces button * {
   transition: none;
 }
-

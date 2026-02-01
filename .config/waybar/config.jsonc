@@ -127,7 +127,7 @@
   },
   "network": {
     "format-alt": "󰛳 {ifname}: {ipaddr}/{cidr}",
-    "format-disconnected": "⚠ Disconnected",
+    "format-disconnected": "󰲛",
     "format-ethernet": "󰈀",
     "format-wifi": "",
     "on-click-right": "kitty -1 --class nmtui nmtui",
