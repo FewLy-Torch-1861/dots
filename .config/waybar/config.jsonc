@@ -26,6 +26,7 @@
     "modules": [
       "cpu",
       "memory",
+      "temperature",
       "pulseaudio",
       "bluetooth",
       "network",
@@ -102,6 +103,13 @@
       "critical": 90
     },
     "tooltip-format": " {used:0.1f}G/{total:0.1f}G\n󰍛 {swapUsed:0.1f}G/{swapTotal:0.1f}G"
+  },
+  "temperature": {
+    "interval": 2,
+    "format": " {temperatureC}°C",
+    "thermal-zone": 8,
+    "critical-threshold": 90,
+    "warning-threshold": 80
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",

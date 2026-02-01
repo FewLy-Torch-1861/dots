@@ -104,6 +104,7 @@ tooltip label {
 
 #cpu.critical,
 #memory.critical,
+#temperature.critical,
 #battery.critical,
 #network.disconnected {
   color: @red;
@@ -111,6 +112,7 @@ tooltip label {
 
 #cpu.high,
 #memory.high,
+#temperature.warning,
 #battery.warning {
   color: @yellow;
 }
