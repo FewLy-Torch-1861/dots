@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PIDFILE="/tmp/gv_macro.pid"
+PIDFILE="/tmp/ad_macro.pid"
 
 # Function to clean up and release keys upon exit
 cleanup() {
@@ -36,10 +36,9 @@ trap cleanup SIGINT SIGTERM
 
 echo "Macro running. Press Ctrl+C to stop."
 
-sleep 0.5
-ydotool key 125:0
-
 while true; do
+  sleep 10
+
   ydotool key 30:1
   ydotool key 30:0
 
@@ -47,6 +46,4 @@ while true; do
 
   ydotool key 32:1
   ydotool key 32:0
-
-  sleep 10
 done
