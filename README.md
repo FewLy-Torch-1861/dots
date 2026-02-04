@@ -11,6 +11,7 @@ A collection of configuration files for my ArchLinux and Hyprland setup.
 | ![Launcher](assets/screenshots/launcher.png) | ![Terminal](assets/screenshots/terminal.png) |
 
 *wallpapers source: [Bocchi-Chan by shiej007](https://www.pixiv.net/en/artworks/121912423), [Chisa by Skell.B](https://www.pixiv.net/en/artworks/139255914)*
+*recolored with [gowall](https://github.com/Achno/gowall)*
 
 ## 🖼️ Overview
 
