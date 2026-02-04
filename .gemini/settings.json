@@ -18,7 +18,8 @@
       "hideContextPercentage": false
     },
     "theme": "/home/nutt/.gemini/themes/catppuccin-mocha.json",
-    "showHomeDirectoryWarning": false
+    "showHomeDirectoryWarning": false,
+    "useBackgroundColor": false
   },
   "context": {
     "loadMemoryFromIncludeDirectories": true,
@@ -35,6 +36,7 @@
     "enabled": true
   },
   "experimental": {
-    "skills": true
+    "skills": true,
+    "plan": true
   }
 }
