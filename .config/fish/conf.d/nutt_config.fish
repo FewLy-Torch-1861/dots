@@ -9,7 +9,8 @@ set -Ux FZF_DEFAULT_OPTS "\
 
 fish_add_path \
     "$HOME/.local/bin" \
-    "$HOME/.go/bin"
+    "$HOME/.go/bin" \
+    "$HOME/.cargo/bin"
 
 # ── Aliases & Abbr ─────────────────────
 # Core shortcuts
