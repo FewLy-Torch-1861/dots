@@ -39,7 +39,13 @@ if [[ -L "$TARGET_PATH" ]]; then
   mv "$LINK_TARGET" "$DEST_PATH"
   rm "$TARGET_PATH"
 else
-  mv "$TARGET_PATH" "$DEST_PATH"
+  if [[ -d "$TARGET_PATH" && -d "$DEST_PATH" ]]; then
+    echo "Merging directory: $REL_PATH"
+    cp -a "$TARGET_PATH"/. "$DEST_PATH"/
+    rm -rf "$TARGET_PATH"
+  else
+    mv "$TARGET_PATH" "$DEST_PATH"
+  fi
 fi
 
 # Stow it back

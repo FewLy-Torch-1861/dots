@@ -9,8 +9,10 @@
 SEARCH_DIRS=("$HOME/.config" "$HOME/.local/bin")
 
 # Find directories or files that are NOT symlinks
-# We use fd to list entries and then filter them.
-UNTRACKED=$(fd --max-depth 2 --base-directory "$HOME" . "${SEARCH_DIRS[@]#$HOME/}" --exec bash -c '[[ ! -L "$HOME/$1" ]] && echo "$1"' -- {})
+# We ignore .git and common cache dirs to keep the list clean
+UNTRACKED=$(fd --hidden --exclude .git --exclude .cache --type d --type f --base-directory "$HOME" . "${SEARCH_DIRS[@]#$HOME/}" | while read -r line; do
+  [[ ! -L "$HOME/$line" ]] && echo "$line"
+done)
 
 if [[ -z "$UNTRACKED" ]]; then
   echo "Everything is tracked, you've actually done something right for once."
@@ -18,11 +20,11 @@ if [[ -z "$UNTRACKED" ]]; then
 fi
 
 # Use fzf as a picker with a tree preview
-SELECTED=$(echo "$UNTRACKED" | fzf 
-  --header "Select files/directories to track (Tab to multi-select)" 
-  --multi 
-  --preview "eza --tree --level 2 --icons --color=always $HOME/{}" 
-  --preview-window "right:50%:wrap")
+SELECTED=$(
+  echo "$UNTRACKED" | fzf --header "Select files/directories to track (Tab to multi-select)" \
+    --multi --preview "eza --tree --level 2 --icons --color=always $HOME/{}" \
+    --preview-window "right:50%:wrap"
+)
 
 if [[ -n "$SELECTED" ]]; then
   echo "$SELECTED" | while read -r item; do
