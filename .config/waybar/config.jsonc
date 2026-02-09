@@ -138,7 +138,7 @@
     "format-disconnected": "󰲛",
     "format-ethernet": "󰈀",
     "format-wifi": "",
-    "on-click-right": "kitty -1 --class nmtui nmtui",
+    "on-click-right": "kitty -1 --class impala impala",
     "tooltip-format": "󰛳 {ifname} via {gwaddr}",
     "tooltip-format-ethernet": "󰈀 {ipaddr}/{cidr} 󰛳 {ifname} via {gwaddr}",
     "tooltip-format-wifi": " {essid} 󰛳 {ifname} via {gwaddr}"

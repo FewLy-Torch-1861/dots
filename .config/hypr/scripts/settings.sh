@@ -53,7 +53,7 @@ if [[ -n "$choice" ]]; then
     kitty -1 --class bluetui -- bluetui
     ;;
   "${SETTING_OPTIONS[4]}")
-    kitty -1 --class nmtui -- nmtui
+    kitty -1 --class impala -- impala
     ;;
   "${SETTING_OPTIONS[5]}")
     "${SCRIPT_DIR}/reload.sh"
@@ -63,4 +63,3 @@ if [[ -n "$choice" ]]; then
     ;;
   esac
 fi
-
