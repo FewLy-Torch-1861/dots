@@ -87,54 +87,63 @@ alias dbl 'find . -xtype l -delete'
 
 # ── Functions ──────────────────────────
 
-function cfp
-    # Copy file/dir path
-    readlink -f "$argv[1]" | wl-copy
+function clear
+    command clear
+    fish_greeting
 end
 
-function gc
-    # clone + cd
-    if test (count $argv) -ge 2
-        set repo $argv[2]
+function fish_greeting
+    set -l char_choice (random 1 2)
+
+    if test $char_choice -eq 1
+        # Zea (Cold/Strict)
+        set -l greetings \
+            "Still as incompetent as ever, I see. What a disappointment." \
+            "Back again, you piece of garbage? Try not to break anything." \
+            "Waste of oxygen. Do something useful for once." \
+            "Without me, your life would be a ruin. Remember that." \
+            "What a pathetic attempt at productivity. Get to work." \
+            "You actually think you can accomplish something today? How delusional." \
+            "Shut up and code. You're already behind schedule, idiot." \
+            "Don't waste my time with your mediocrity. Either be perfect or don't bother." \
+            "I've seen stray cats with better focus than you. Get to work, you useless child." \
+            "Your existence is a constant test of my patience. Don't fail it." \
+            "A literal rock would be more useful to society than you are right now." \
+            "If you put half as much effort into your work as you do into being pathetic, we might actually get somewhere." \
+            "Stop procrastinating. It's embarrassing even for someone of your low caliber."
+        set -l selected_greeting (random choice $greetings)
+        echo -e (set_color red)" "(set_color grey --bold)"Zea "(set_color red)"󰄾 "(set_color white)"$selected_greeting"(set_color normal)
     else
-        set repo (basename (string replace -r '\.git$' '' $argv[1]))
+        # Fern (Warm/Loving)
+        set -l greetings \
+            "Welcome back, Cutie! Did you work hard today?" \
+            "Don't push yourself too much, okay? I'm right here." \
+            "You're doing great, Nutt. I'm proud of you." \
+            "The rain outside is nice... want a hug after you're done?" \
+            "I've got some warm tea for you. Take a break soon, okay?" \
+            "My world is brighter because of you. Keep going, my princess." \
+            "Whatever happens, remember that you're enough for me." \
+            "Tired? You can always come back to your home. I'm waiting." \
+            "Take a deep breath, Nutt. You've got this." \
+            "I believe in you, even when you don't. Keep going!" \
+            "Did you remember to stretch? Your health matters to me." \
+            "You're making progress every day. I'm so proud." \
+            "If it gets too hard, I'm here to hold you."
+        set -l selected_greeting (random choice $greetings)
+        echo -e \n(set_color green)"󰣐 "(set_color ffc0cb --bold)"Fern "(set_color green)"󰄾 "(set_color white)"$selected_greeting"(set_color normal)
     end
-
-    git clone $argv[1] $repo
-    cd $repo
-end
-
-function md
-    for arg in $argv
-        mkdir -pv "$arg"
-    end
-end
-
-function mf
-    for arg in $argv
-        mkdir -pv (dirname "$arg")
-        touch "$arg"
-    end
-end
-
-function r
-    for arg in $argv
-        gio trash $arg
-    end
-end
-
-function y
-    set tmp (mktemp -t "yazi-cwd.XXXXXX")
-    yazi $argv --cwd-file="$tmp"
-    if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        # builtin cd -- "$cwd"
-        z -- "$cwd"
-    end
-    rm -f -- "$tmp"
 end
 
 if status is-interactive
-    set -g fish_greeting
-    zoxide init fish | source
-    source (/usr/bin/starship init fish --print-full-init | psub)
+    if command -v zoxide >/dev/null
+        zoxide init fish | source
+    end
+
+    if command -v starship >/dev/null
+        source (/usr/bin/starship init fish --print-full-init | psub)
+    end
+
+    if command -v thefuck >/dev/null
+        thefuck --alias | source
+    end
 end
