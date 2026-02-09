@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# --------------------------------------------------------------------------
+# dots-track: Adopts a file or directory into the dotfiles repository.
+# Usage: dots-track <path_to_file_or_dir>
+# --------------------------------------------------------------------------
+
+DOTS_DIR="$HOME/.dots"
+TARGET_PATH=$(realpath "$1")
+
+if [[ ! -e "$TARGET_PATH" ]]; then
+  echo "Error: Path '$1' does not exist."
+  exit 1
+fi
+
+if [[ "$TARGET_PATH" != "$HOME"* ]]; then
+  echo "Error: Only files within your home directory can be tracked."
+  exit 1
+fi
+
+# Calculate relative path from HOME
+REL_PATH="${TARGET_PATH#$HOME/}"
+DEST_PATH="$DOTS_DIR/$REL_PATH"
+
+echo "Adopting: $REL_PATH"
+
+# Create destination directory
+mkdir -p "$(dirname "$DEST_PATH")"
+
+# Move the target to the dots repo
+if [[ -L "$TARGET_PATH" ]]; then
+  echo "Warning: '$1' is already a symlink. Checking if it's already in the repo..."
+  LINK_TARGET=$(readlink -f "$TARGET_PATH")
+  if [[ "$LINK_TARGET" == "$DOTS_DIR"* ]]; then
+    echo "Already tracked: $REL_PATH"
+    exit 0
+  fi
+  echo "Moving symlink target instead..."
+  mv "$LINK_TARGET" "$DEST_PATH"
+  rm "$TARGET_PATH"
+else
+  mv "$TARGET_PATH" "$DEST_PATH"
+fi
+
+# Stow it back
+cd "$DOTS_DIR"
+stow .
+
+echo "Successfully tracked and linked: $REL_PATH"

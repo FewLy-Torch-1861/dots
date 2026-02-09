@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# --------------------------------------------------------------------------
+# dots-add: Interactive picker to add untracked files to the repo.
+# Uses fd, fzf, and eza for a "beautiful" experience for lazy people.
+# --------------------------------------------------------------------------
+
+# Search only in common dotfile locations, feel free to add more if you have more mess.
+SEARCH_DIRS=("$HOME/.config" "$HOME/.local/bin")
+
+# Find directories or files that are NOT symlinks
+# We use fd to list entries and then filter them.
+UNTRACKED=$(fd --max-depth 2 --base-directory "$HOME" . "${SEARCH_DIRS[@]#$HOME/}" --exec bash -c '[[ ! -L "$HOME/$1" ]] && echo "$1"' -- {})
+
+if [[ -z "$UNTRACKED" ]]; then
+  echo "Everything is tracked, you've actually done something right for once."
+  exit 0
+fi
+
+# Use fzf as a picker with a tree preview
+SELECTED=$(echo "$UNTRACKED" | fzf 
+  --header "Select files/directories to track (Tab to multi-select)" 
+  --multi 
+  --preview "eza --tree --level 2 --icons --color=always $HOME/{}" 
+  --preview-window "right:50%:wrap")
+
+if [[ -n "$SELECTED" ]]; then
+  echo "$SELECTED" | while read -r item; do
+    dots-track "$HOME/$item"
+  done
+else
+  echo "Cancelled. Typical indecisiveness."
+fi
