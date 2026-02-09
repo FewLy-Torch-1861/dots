@@ -87,11 +87,6 @@ alias dbl 'find . -xtype l -delete'
 
 # ── Functions ──────────────────────────
 
-function clear
-    command clear
-    fish_greeting
-end
-
 function cfp
     # Copy file/dir path
     readlink -f "$argv[1]" | wl-copy
