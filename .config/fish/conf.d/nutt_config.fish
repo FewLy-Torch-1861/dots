@@ -129,8 +129,17 @@ function y
     if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
         # builtin cd -- "$cwd"
         z -- "$cwd"
+        rm -f -- "$tmp"
     end
-    rm -f -- "$tmp"
+end
+
+function yc
+    set tmp (mktemp -t "yazi-chooser.XXXXXX")
+    yazi $argv --chooser-file="$tmp"
+    if test -s "$tmp"
+        echo (cat "$tmp")
+        rm -f -- "$tmp"
+    end
 end
 
 if status is-interactive
