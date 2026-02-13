@@ -27,7 +27,6 @@
       "cpu",
       "memory",
       "temperature",
-      "pulseaudio",
       "bluetooth",
       "network",
       "battery"
@@ -110,20 +109,6 @@
     "thermal-zone": 8,
     "critical-threshold": 90,
     "warning-threshold": 80
-  },
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-icons": {
-      "default": [
-        "",
-        ""
-      ]
-    },
-    "format-muted": " muted",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "kitty -1 --class pulsemixer pulsemixer",
-    "scroll-step": 5,
-    "tooltip": false
   },
   "bluetooth": {
     "format": "",
