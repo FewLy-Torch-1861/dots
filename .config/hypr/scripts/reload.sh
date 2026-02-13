@@ -9,6 +9,7 @@ makoctl reload
 hyprctl reload
 
 chmod +x ~/.config/hypr/scripts/*
+stow "$HOME"/.dots
 
 if [[ $1 == "hard" ]]; then
   pkill waybar || true && waybar
