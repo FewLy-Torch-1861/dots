@@ -148,7 +148,7 @@ if status is-interactive
     end
 
     if command -v starship >/dev/null
-        source (/usr/bin/starship init fish --print-full-init | psub)
+        source (starship init fish --print-full-init | psub)
     end
 
     if command -v thefuck >/dev/null
