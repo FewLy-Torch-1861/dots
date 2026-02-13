@@ -28,3 +28,12 @@ default-timeout=5000
 [urgency=high]
 border-color=#f38ba8
 default-timeout=12000
+
+[app-name=osd]
+anchor=top-center
+width=260
+outer-margin=6
+margin=15,0,0,0
+padding=5
+text-alignment=center
+format=<b>%s</b>%b

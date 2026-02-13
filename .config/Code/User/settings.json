@@ -2,8 +2,17 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "lumirelle.shell-format-rev"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
   "chat.commandCenter.enabled": false,
   "editor.cursorBlinking": "phase",
@@ -26,6 +35,12 @@
   },
   "git.autofetch": true,
   "git.confirmSync": false,
+  "github.copilot.enable": {
+    "*": false,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
+  },
   "http.systemCertificatesNode": true,
   "python.analysis.typeCheckingMode": "standard",
   "redhat.telemetry.enabled": true,
@@ -50,17 +65,5 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
-  "workbench.tree.enableStickyScroll": false,
-  "[shellscript]": {
-    "editor.defaultFormatter": "lumirelle.shell-format-rev"
-  },
-  "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml"
-  },
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  }
+  "workbench.tree.enableStickyScroll": false
 }
