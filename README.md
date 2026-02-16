@@ -29,7 +29,7 @@ A collection of configuration files for my ArchLinux and Hyprland setup.
 
 For the best results, it is recommended to manually inspect the configurations and integrate the specific components that align with your requirements. Understanding how your system is configured is the only way to ensure stability and efficiency. Evaluate the code, adapt it to your hardware, and refine it until it meets your own standards.
 
-### Install script
+### Install script (Not Tested)
 
 ```bash
 git clone https://github.com/FewLy-Torch-1861/dots.git ~/.dots
